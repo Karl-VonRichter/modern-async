@@ -1,6 +1,6 @@
 
-export { default as asyncRoot } from './asyncRoot.mjs'
-export { default as asyncWrap } from './asyncWrap.mjs'
+export { default as asyncRoot } from './asyncRoot'
+export { default as asyncWrap } from './asyncWrap'
 export { default as CancelledError } from './CancelledError.mjs'
 export { default as Deferred } from './Deferred.mjs'
 export { default as delay } from './delay.mjs'

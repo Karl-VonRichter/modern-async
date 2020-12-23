@@ -20,7 +20,7 @@ import assert from 'nanoassert'
  * const promise = asyncFct()
  * console.log(promise instanceof Promise) // prints true
  */
-function asyncWrap (fct) {
+function asyncWrap (fct: Function) {
   assert(typeof fct === 'function', 'fct must be a function')
   return async function () {
     return fct(...arguments)

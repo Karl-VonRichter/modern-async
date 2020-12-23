@@ -1,5 +1,5 @@
 
-import asyncWrap from './asyncWrap.mjs'
+import asyncWrap from './asyncWrap'
 
 /**
  * Immediately calls an asynchronous function and redirects to an error handler if it throws an exception.
@@ -14,7 +14,7 @@ import asyncWrap from './asyncWrap.mjs'
  *
  * @example
  * import { asyncRoot } from 'modern-async'
- *
+ *x
  * // or
  *
  * const { asyncRoot } = require('modern-async')
@@ -26,8 +26,8 @@ import asyncWrap from './asyncWrap.mjs'
  *   process.exit(-1)
  * })
  */
-async function asyncRoot (fct, errorHandler = null) {
-  errorHandler = errorHandler || ((e) => {
+async function asyncRoot (fct: Function, errorHandler: Function|null = null) {
+  errorHandler = errorHandler || ((e: Error) => {
     console.error(e)
   })
   const asyncFct = asyncWrap(fct)
